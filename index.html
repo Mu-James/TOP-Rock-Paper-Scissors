@@ -2,11 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <script src="game.js" ></script>
     
 </head>
 <body>
-    <script>getComputerChoice()</script>
+    <script>
+        let humanScore = 0;
+        let computerScore = 0;
+        const numRounds = 5;
+        let currentRound = 1;
+        while (currentRound <= numRounds) {
+            console.log(`Round ${currentRound}`);
+            let humanSelection = getHumanChoice();
+            let computerSelection = getComputerChoice();
+            let winning = playRound(humanSelection, computerSelection);
+            if (winning == 0) {
+                humanScore++;
+            }
+            else if (winning == 1) {
+                computerScore++;
+            }
+            currentRound++;
+            console.log(`Human Score: ${humanScore}`);
+            console.log(`Computer Score: ${computerScore}`);
+        }
+    </script>
 </body>
 </html>
