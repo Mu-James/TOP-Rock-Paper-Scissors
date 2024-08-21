@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
-    <script src="game.js" ></script>
+    <script src="game.js" defer></script>
     
 </head>
 <body>
@@ -12,21 +12,11 @@
         let computerScore = 0;
         const numRounds = 5;
         let currentRound = 1;
-        while (currentRound <= numRounds) {
-            console.log(`Round ${currentRound}`);
-            let humanSelection = getHumanChoice();
-            let computerSelection = getComputerChoice();
-            let winning = playRound(humanSelection, computerSelection);
-            if (winning == 0) {
-                humanScore++;
-            }
-            else if (winning == 1) {
-                computerScore++;
-            }
-            currentRound++;
-            console.log(`Human Score: ${humanScore}`);
-            console.log(`Computer Score: ${computerScore}`);
-        }
     </script>
+    <div id="btnContainer">
+        <button id ="rockBtn">Rock</button>
+        <button id ="paperBtn">Paper</button>
+        <button id ="scissorBtn">Scissor</button>
+    </div>
 </body>
 </html>

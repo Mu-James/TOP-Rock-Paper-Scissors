@@ -54,3 +54,15 @@ function playRound(humanChoice, computerChoice) {
     }
     return winning;
 }
+
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorBtn = document.querySelector("#scissorBtn");
+
+const choiceBtns = document.querySelectorAll("button");
+choiceBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id)
+    })
+}
+)
